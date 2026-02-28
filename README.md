@@ -48,5 +48,21 @@ To install nginx, first update the package manager and the install nginx.<br/>
    sudo apt install nginx(It will install the nginx in your instance)<br/>
    <ul>
      <li>After installing nginx, if it is not started or if it is not enabled then use this command<br/>
+       <ul><li>For Ubuntu: sudo systemctl start nginx</li>
+           <li>sudo systemctl enable nginx</li></ul>
+     </li>
+     <li>To deploy the application, we must copy our static website files in the correct directory
+for the webserver to serve them.
+       Command:  sudo cp -r ./static website repo name/* /var/www/html
+     </li>
+     <li>Copy the public ip address from AWS instance page and paste it in the searchbar of the browser<br/>
+(If it doesn't load follow these steps:<br/>
+       <ul>
+         <li>Tick on the instance and go to the security options.</li>
+         <li>Under security click on security group.</li>
+         <li>Then click on edit inbound rules</li>
+         <li>Click on add rule. Under that select HTTP and select anywhere ipu4 and then save the rules.</li>
+         <li>Refresh the page and make https as http.</li>
+       </ul>
      </li>
    </ul>
